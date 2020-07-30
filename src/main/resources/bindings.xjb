@@ -1,0 +1,24 @@
+<jxb:bindings
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+    xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+    jxb:extensionBindingPrefixes="xjc"
+    version="2.1"
+>
+
+    <!-- setting generateElementProperty to "false" avoids usage of @XmlElementRef -->
+    <jxb:globalBindings generateElementProperty="false">
+        <xjc:simple/>
+        <xjc:generateElementProperty>false</xjc:generateElementProperty>
+        <!-- add Serializable interface implementation to all generate classes-->
+        <xjc:serializable/>
+
+        <!-- map xsd:date to java.time.LocalDate -->
+        <xjc:javaType name="java.time.LocalDate" xmlType="xs:date" adapter="sk.plaut.gpepmi.advice.xml.XmlDateAdapter"/>
+        <!-- map xsd:dateTime to java.time.OffsetDateTime -->
+        <xjc:javaType name="java.time.OffsetDateTime" xmlType="xs:dateTime" adapter="sk.plaut.gpepmi.advice.xml.XmlDateTimeAdapter"/>
+        <!-- map xsd:time to java.time.OffsetTime -->
+        <xjc:javaType name="java.time.OffsetTime" xmlType="xs:time" adapter="sk.plaut.gpepmi.advice.xml.XmlTimeAdapter"/>
+    </jxb:globalBindings>
+
+</jxb:bindings>

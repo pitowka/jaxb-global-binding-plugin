@@ -1,0 +1,21 @@
+plugins {
+    // Apply the java-library plugin to add support for Java Library
+    id 'java-library'
+}
+
+repositories {
+    // Use jcenter for resolving dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+dependencies {
+	implementation 'com.sun.xml.bind:jaxb-xjc:2.3.3'
+	
+	// inspiration
+	testImplementation 'net.java.dev.jaxb2-commons:jaxb-fluent-api:2.1.8'
+	testImplementation 'net.codesup.util:jaxb2-rich-contract-plugin:2.0.1'
+	
+	// testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
+    // testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.2'
+}
