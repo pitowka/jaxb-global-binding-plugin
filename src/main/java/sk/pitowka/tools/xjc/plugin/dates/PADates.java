@@ -3,7 +3,6 @@ package sk.pitowka.tools.xjc.plugin.dates;
 import com.sun.tools.xjc.Options;
 
 import sk.pitowka.tools.plugin.ParseArgument;
-import sk.pitowka.tools.plugin.XmlFragment;
 
 public class PADates implements ParseArgument {
 	public static final PADates DATE = new PADates("xs:date", "-date-type", "-date-adapter");
@@ -60,8 +59,8 @@ public class PADates implements ParseArgument {
 	}
 	
 	@Override
-	public XmlFragment asXmlFragment() {
-		return () -> String.format("<xjc:javaType name=\"%s\" xmlType=\"%s\" adapter=\"%s\"/>\n", type, xsType, adapter);
+	public String xmlFragment() {
+		return String.format("<xjc:javaType name=\"%s\" xmlType=\"%s\" adapter=\"%s\"/>\n", type, xsType, adapter);
 	}
 
 	@Override

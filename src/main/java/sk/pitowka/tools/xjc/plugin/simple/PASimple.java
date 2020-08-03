@@ -3,7 +3,6 @@ package sk.pitowka.tools.xjc.plugin.simple;
 import com.sun.tools.xjc.Options;
 
 import sk.pitowka.tools.plugin.ParseArgument;
-import sk.pitowka.tools.plugin.XmlFragment;
 
 public class PASimple implements ParseArgument {
 	
@@ -26,8 +25,8 @@ public class PASimple implements ParseArgument {
 	}
 	
 	@Override
-	public XmlFragment asXmlFragment() {
-		return () -> isSimple ? "<xjc:simple/>\n" : "";
+	public String xmlFragment() {
+		return isSimple ? "<xjc:simple/>\n" : "";
 	}
 
 	@Override

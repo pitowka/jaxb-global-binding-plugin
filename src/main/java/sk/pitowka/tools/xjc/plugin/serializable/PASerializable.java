@@ -3,7 +3,6 @@ package sk.pitowka.tools.xjc.plugin.serializable;
 import com.sun.tools.xjc.Options;
 
 import sk.pitowka.tools.plugin.ParseArgument;
-import sk.pitowka.tools.plugin.XmlFragment;
 
 // TODO tieto by sa dali dat ako boolean  ale zmienit nazov premennej
 public class PASerializable implements ParseArgument {
@@ -25,8 +24,8 @@ public class PASerializable implements ParseArgument {
 	}
 
 	@Override
-	public XmlFragment asXmlFragment() {
-		return () -> isSerializable ? "<xjc:serializable/>\n" : "";
+	public String xmlFragment() {
+		return isSerializable ? "<xjc:serializable/>\n" : "";
 	}
 	
 	@Override

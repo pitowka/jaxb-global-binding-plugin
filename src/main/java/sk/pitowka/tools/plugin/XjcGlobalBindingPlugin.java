@@ -20,7 +20,7 @@ public class XjcGlobalBindingPlugin extends Plugin{
 	
 	@Override
 	public int parseArgument(Options opt, String[] args, int i) throws BadCommandLineException, IOException {
-		return new PAGlobalBinding().parseArgument(opt, args, i).parsedArgument();
+		return new PABindFile().parseArgument(opt, args, i).parsedArgument();
 	}
 	
 	// TODO prepisat to na PAGlobalBinding metodu, lebo ona bude vediet, co vsetko sa robi
@@ -40,19 +40,19 @@ public class XjcGlobalBindingPlugin extends Plugin{
 			.append("\t").append("-no-element-property").append("\n")
 			.append("\t").append("\t").append("<xjc:generateElementProperty>false</xjc:generateElementProperty>").append("\n").append("\n")
 			
-			.append("\t").append("-xs-date-type").append("\n")
+			.append("\t").append("-date-type").append("\n")
 			.append("\t").append("\t").append("xjc:javaType name=value").append("\n")
-			.append("\t").append("-xs-date-adapter").append("\n")
+			.append("\t").append("-date-adapter").append("\n")
 			.append("\t").append("\t").append("xjc:javaType adapter=value").append("\n").append("\n")
 			
-			.append("\t").append("-xs-dateTime-type").append("\n")
+			.append("\t").append("-dateTime-type").append("\n")
 			.append("\t").append("\t").append("xjc:javaType name=value").append("\n")
-			.append("\t").append("-xs-dateTime-adapter").append("\n")
+			.append("\t").append("-dateTime-adapter").append("\n")
 			.append("\t").append("\t").append("xjc:javaType adapter=value").append("\n").append("\n")
 			
-			.append("\t").append("-xs-time-type").append("\n")
+			.append("\t").append("-time-type").append("\n")
 			.append("\t").append("\t").append("xjc:javaType name=value").append("\n")
-			.append("\t").append("-xs-time-adapter").append("\n")
+			.append("\t").append("-time-adapter").append("\n")
 			.append("\t").append("\t").append("xjc:javaType adapter=value").append("\n").append("\n")
 			
 			
