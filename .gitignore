@@ -10,5 +10,5 @@ build
 .settings
 bin
 
-# Ignore sandBox direcotry
+# Ignore sandBox directory
 sandBox
